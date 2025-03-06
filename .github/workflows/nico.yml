@@ -30,6 +30,6 @@ jobs:
       - name: build nginx images
         run: docker pull nginx
       - name: read images 
-        run: docker run -it nginx:latest 
+        run: docker images
       - name: docker ps -a 
         run: docker ps
