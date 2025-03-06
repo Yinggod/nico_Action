@@ -31,3 +31,5 @@ jobs:
         run: docker pull nginx
       - name: read images 
         run: docker run -it nginx:latest 
+      - name: docker ps -a 
+        run: docker ps
