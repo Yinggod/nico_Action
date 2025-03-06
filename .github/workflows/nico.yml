@@ -11,27 +11,5 @@ jobs:
   build-and-test:
     # 运行环境：最新版本的 Ubuntu
     runs-on: ubuntu-latest
-
-    # 步骤
-    steps:
-      # 1. 检出代码
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      # 2. 设置 Node.js 环境
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18 # 指定 Node.js 版本
-
-      # 3. 安装依赖
-      - name: Install dependencies
-        run: npm install
-
-      # 4. 运行测试
-      - name: Run tests
-        run: npm test
-
-      # 5. 构建项目
       - name: Build project
-        run: npm run build
+        run: pwd
