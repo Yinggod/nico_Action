@@ -28,6 +28,6 @@ jobs:
 
     steps:
       - name: build nginx images
-        run: docker ps 
+        run: docker pull nginx
       - name: read images 
         run: docker images 
