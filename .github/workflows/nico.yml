@@ -23,3 +23,11 @@ jobs:
         run: pwd
       - name: print date 
         run: date
+  nico-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: build nginx images
+        run: docker ps 
+      - name: read images 
+        run: docker images 
