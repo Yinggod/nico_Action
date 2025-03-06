@@ -21,3 +21,5 @@ jobs:
       # 2. 打印当前工作目录
       - name: Build project
         run: pwd
+      - name: print date 
+        run: date
