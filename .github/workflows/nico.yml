@@ -11,5 +11,13 @@ jobs:
   build-and-test:
     # 运行环境：最新版本的 Ubuntu
     runs-on: ubuntu-latest
+
+    # 步骤
+    steps:
+      # 1. 检出代码
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. 打印当前工作目录
       - name: Build project
         run: pwd
