@@ -30,7 +30,7 @@ jobs:
           name: nico-docker-images-tar
           path: nginx_nico.tar.tar.gz
           retention-days: 90
-        
+
       - name: delete images file
         run: | 
           rm  nginx_nico.tar.tar.gz
