@@ -16,5 +16,22 @@ jobs:
       - name: Build Docker image
         run: docker build -t nginx:nico -f docker/Dockerfile .
 
-      - name: Push Docker image
+      - name: save images to local
+        run: docker save nginx:nico nginx_nico.tar
+
+      - name: run Docker image
         run: docker run -d -p 80:80 --name nico-nginx nginx:nico
+
+      - name: tar nginx images 
+        run: tar -czf nginx_nico.tar.tar.gz nginx_nico.tar
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nico-docker-images-tar
+          path: nginx_nico.tar.tar.gz
+          retention-days: 90
+        
+      - name: delete images file
+        run: | 
+          rm  nginx_nico.tar.tar.gz
+  
