@@ -11,6 +11,7 @@ RUN yum install -y epel-release && \
     yum update -y && \
     yum install -y nginx && \
     yum clean all && \
+    rm -f /usr/share/nginx/html/index.html && \
     echo "this is my nginx" > /usr/share/nginx/html/index.html
 
 # 验证 Nginx 配置
