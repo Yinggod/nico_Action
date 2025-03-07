@@ -19,36 +19,27 @@ jobs:
         uses: actions/checkout@v3
 
       # 2. 打印当前工作目录
-      - name: Build project
+      - name: Print working directory
         run: pwd
-      - name: print date 
+
+      # 3. 打印当前日期
+      - name: Print date
         run: date
+
   nico-build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: build nginx images
-        run: docker pull nginx
-      - name: read images 
-        run: docker images
-      - name: docker ps -a 
-        run: docker ps
-
-name: nico 10000
-
-# 触发条件：当代码推送到 main 分支时触发
-on:
-  push:
-    branches:
-      - main
-
-# 定义任务
-jobs:
-  build-and-test:
     # 运行环境：最新版本的 Ubuntu
     runs-on: ubuntu-latest
 
     # 步骤
     steps:
-      - name: test0001
-        run: ls -l 
+      # 1. 拉取 nginx 镜像
+      - name: Pull nginx image
+        run: docker pull nginx
+
+      # 2. 列出本地镜像
+      - name: List Docker images
+        run: docker images
+
+      # 3. 列出所有容器
+      - name: List Docker containers
+        run: docker ps -a
