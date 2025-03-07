@@ -1,3 +1,2 @@
 # nico_Action
-nico
-测试进行github Action 进行镜像拉取
+学习使用 github Action进行dockerfile 的镜像打包与运行
