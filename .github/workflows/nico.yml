@@ -17,4 +17,4 @@ jobs:
         run: docker build -t nginx:nico -f docker/Dockerfile .
 
       - name: Push Docker image
-        run: docker run -d -p 80:80 -name nico-nginx nginx:nico
+        run: docker run -d -p 80:80 --name nico-nginx nginx:nico
