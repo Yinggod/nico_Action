@@ -34,4 +34,3 @@ jobs:
       - name: delete images file
         run: | 
           rm  nginx_nico.tar.tar.gz
-  
