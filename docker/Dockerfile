@@ -4,7 +4,7 @@ FROM centos:7
 RUN rm -f /etc/yum.repos.d/*
 
 # 复制自定义的 CentOS-Base.repo 文件
-COPY CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo
+COPY docker/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo
 
 # 安装依赖并更新系统
 RUN yum install -y epel-release && \
