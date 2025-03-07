@@ -17,7 +17,7 @@ jobs:
         run: docker build -t nginx:nico -f docker/Dockerfile .
 
       - name: save images to local
-        run: docker save nginx_nico.tar nginx:nico 
+        run: docker save -o nginx_nico.tar nginx:nico 
 
       - name: run Docker image
         run: docker run -d -p 80:80 --name nico-nginx nginx:nico
